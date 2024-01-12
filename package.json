@@ -1,7 +1,7 @@
 {
   "name": "metatags",
   "private": true,
-  "version": "B1.0.1",
+  "version": "B1.0.2",
   "type": "module",
   "company": {
     "name": "Cat's Flow",
@@ -26,8 +26,8 @@
   "devDependencies": {
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.55.0",
     "eslint-plugin-react-hooks": "^4.6.0",

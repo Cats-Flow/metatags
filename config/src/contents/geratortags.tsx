@@ -9,7 +9,7 @@ export function MetaTagGenerator() {
   const [pageDiscricao, setPageDiscricao] = useState("");
   const [pageAutor, setPageAutor] = useState("");
   const [pageKeywords, setPageKeywords] = useState("");
-  const [pageIdioma, setPageIdioma] = useState("pt");
+  const [pageIdioma, setPageIdioma] = useState("");
   const [pageRobots, setPageRobots] = useState<string[]>([]);
   const [userTwitter, setUserTwitter] = useState("");
   const [googleId, setGoogleId] = useState("");
