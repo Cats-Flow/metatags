@@ -1,17 +1,13 @@
 import React from "react";
 import { Header } from "../contents/header";
 import { Footer } from "../contents/footer";
-import { MetaTagGenerator } from "../contents/geratortags";
-import PreviewTags from "../contents/previewtag";
+import { Main } from "../contents/main";
 
 export function Home() {
   return (
     <>
       <Header />
-      <main className="_main">
-        <MetaTagGenerator  />
-        <PreviewTags />
-      </main>
+      <Main />
       <Footer />
     </>
   );
