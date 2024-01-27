@@ -1,0 +1,151 @@
+/* Modal - Tag Gerada */
+.css-1oxhx2p {
+  width: 100vw !important;
+  height: 100vh !important;
+
+  background: rgba(34, 35, 39, 0.5);
+}
+
+.modal {
+  background: var(--color-5);
+
+  width: 65rem !important;
+
+  padding: 0.5rem;
+  gap: 25px;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.modal header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal header h3 {
+  font-size: 24px;
+}
+
+.modal header button {
+  padding: 0.5rem;
+
+  background-color: var(--color-3);
+  border-radius: 0.5rem;
+}
+
+.modal header button:hover {
+  transition: all 0.5s;
+
+  background-color: var(--color-14);
+}
+
+.modal header svg {
+  font-size: 1.5rem;
+}
+
+.modal textarea {
+  background: var(--color-3);
+
+  color: var(--color-6);
+
+  font: var(--text-primary);
+  font-weight: 500;
+
+  font-size: .8rem;
+
+  width: 100%;
+  height: 35rem;
+
+  padding: .6rem;
+  border-radius: 0.5rem;
+
+  resize: none;
+}
+
+.modal textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+.modal textarea::-webkit-scrollbar-track {
+  background: var(--color-3);
+  border-radius: 0.5rem;
+}
+
+.modal textarea::-webkit-scrollbar-thumb {
+  background-color: var(--color-15);
+  border-radius: 20px;
+
+  border: 4px solid var(--color-3);
+}
+
+.modal footer {
+  justify-content: center;
+}
+
+.modal ._btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--color-13);
+  color: var(--color-8);
+
+  padding: 1rem;
+  gap: 0.8rem;
+
+  font: var(--text-primary);
+  font-weight: 500;
+
+  border-radius: 0.5rem;
+
+  width: -webkit-fill-available;
+}
+
+.modal ._btn:hover {
+  transition: all 0.5s;
+  background: var(--color-14);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    border-radius: 15px;
+
+    margin: 1rem;
+    padding: 35px 25px;
+  }
+
+  .modal textarea {
+    padding: 1rem;
+  }
+
+  .modal ._btn {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal {
+    width: 65rem !important;
+
+    gap: 25px;
+  }
+
+  .modal header h3 {
+    font-size: 30px;
+  }
+
+  .modal textarea {
+    padding: 1rem;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal {
+    margin: auto;
+  }
+}
