@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+
+@import url(./reset.css);
+
+:root {
+  /* Color's */
+  --color-1: #1c1d22;
+  --color-2: #222327;
+  --color-3: #24262c;
+  --color-4: #292b31;
+  --color-5: #2a2b2f;
+  --color-6: #939393;
+  --color-7: #b4b4b4;
+  --color-8: #e7e7e7;
+  --color-9: #eeeeee;
+  --color-10: #40ddb6;
+  --color-11: #6b78e5;
+  --color-12: #098a69;
+  --color-13: #005540;
+  --color-14: #00795a;
+  --color-15: #6d6d6d;
+
+  /* Font's */
+  --h1: 700 1.62rem "Poppins", Arial, Sans-serif;
+  --h2: 600 1.5rem "Poppins", Arial, Sans-serif;
+  --h3: 500 1.3rem "Poppins", Arial, Sans-serif;
+  --h4: 500 1.15rem "Poppins", Arial, Sans-serif;
+  --text-primary: 400 1rem "Poppins", Arial, Sans-serif;
+  --text-secondary: 500 1rem "Poppins", Arial, Sans-serif;
+  --text-tertiary: 400 0.87rem "Poppins", Arial, Sans-serif;
+  --text-detail: 400 0.87rem "Poppins", Arial, Sans-serif;
+
+  /* Other's */
+  --scroll-bar-color: #2a2b2f;
+  --scroll-bar-background: #222327;
+
+  --outline: 2px dotted #6b78e5;
+  --hover: #6b78e5;
+}
+
+.mt {
+  background: var(--color-5);
+  color: var(--color-8);
+
+  font: var(--text-primary);
+
+  user-select: none;
+}
+
+/* Titles Presets */
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+h4 {
+  font: var(--h4);
+}
+
+/* ! Scroll Bar */
+/** The CSS code you provided is responsible for styling the scroll bar in a web page. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-background);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-bar-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-bar-color);
+  border-radius: 20px;
+  border: 4px solid var(--scroll-bar-background);
+}
+
+/* Header & Footer */
+.mt ._header,
+.mt ._footer {
+  background: var(--color-2);
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  padding: 1.5rem 1rem;
+}
+
+.mt ._header {
+  justify-content: center;
+}
+
+.mt ._header img {
+  height: 2rem;
+}
+
+.mt ._header hr {
+  border: 1px solid var(--color-7);
+  height: 2rem;
+}
+
+.mt ._header h1 {
+  font-size: 1.5rem;
+}
+
+.mt ._footer {
+  justify-content: space-between;
+
+  color: var(--color-6);
+
+  font: var(--text-detail);
+}
+
+.mt ._footer ._git {
+  display: flex;
+  align-items: center;
+
+  gap: 0.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  /* Header & Footer */
+  .mt ._header {
+    justify-content: start;
+
+    padding: 1.5rem 1rem;
+  }
+
+  .mt ._header img,
+  .mt ._header hr {
+    height: 2.5rem;
+  }
+
+  .mt ._header h1 {
+    font-size: 2rem;
+  }
+
+  .mt ._footer {
+    padding: 1rem;
+  }
+}
