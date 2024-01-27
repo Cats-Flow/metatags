@@ -4,6 +4,10 @@ import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Modal
 import { Code, Key, LinkSimple, Robot, TextAlignLeft, TextT, Translate, User, X } from "@phosphor-icons/react";
 import { MetaTagPreview } from './preview';
 
+// Styles
+import "../../public/styles/main.css"
+import "../../public/styles/modal.css"
+
 export function Main() {
   const [pageUrl, setPageUrl] = useState("");
   const [pageTitle, setPageTitle] = useState("");
@@ -19,7 +23,10 @@ export function Main() {
   const gerateCode = () => {
     const code = `
     <!-- Primary Meta Tags -->
+    <meta charset="UTF-8">
     <meta name="language" content="${pageIdioma}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>${pageTitle}</title>
     <meta name="title" content="${pageTitle}" />
     <meta name="description" content="${pageDiscricao}" />
@@ -53,7 +60,7 @@ export function Main() {
       gtag('config', '${googleId}');
     </script>
     
-    <!-- Gerado por MetaTags ToolKit by Cat's Flow - https://toolkit.catsflow.com/metatags/ -->`;
+    <!-- Gerado por MetaTags ToolKit by Cat's Flow - https://cats-flow.github.io/metatags/ -->`;
 
     setGeneratedCode(code);
   };
@@ -100,7 +107,7 @@ export function Main() {
             {/* Título da página */}
             <label htmlFor="title" className="camp">
               <TextT />
-              <input type="text" id="title" placeholder="Título da página" value={pageTitle} onChange={(e) => setPageTitle(e.target.value)} maxLength={32} size={32} required />
+              <input type="text" id="title" placeholder="Título da página" value={pageTitle} onChange={(e) => setPageTitle(e.target.value)} maxLength={64} size={64} required />
             </label>
             {/* Discrição da página */}
             <label htmlFor="description" className="camp textarea">
@@ -110,17 +117,17 @@ export function Main() {
             {/* Autor da página */}
             <label htmlFor="autor" className="camp">
               <User />
-              <input type="text" id="autor" placeholder="Autor da página" value={pageAutor} onChange={(e) => setPageAutor(e.target.value)} maxLength={64} size={64} required />
+              <input type="text" id="autor" placeholder="Autor da página" value={pageAutor} onChange={(e) => setPageAutor(e.target.value)} maxLength={32} size={32} required />
             </label>
             {/* Palavras chaves da página */}
             <label htmlFor="keys" className="camp">
               <Key />
-              <input type="text" id="keys" placeholder="Palavras chaves da página" value={pageKeywords} onChange={(e) => setPageKeywords(e.target.value)} maxLength={64} size={64} required />
+              <input type="text" id="keys" placeholder="Palavras chaves" value={pageKeywords} onChange={(e) => setPageKeywords(e.target.value)} required />
             </label>
             {/* Idioma da página */}
             <label htmlFor="idioma" className="camp">
               <Translate />
-              <Select className="select" id="idioma" placeholder="Idioma da página" value={pageIdioma} onChange={(e) => setPageIdioma(e.target.value)}>
+              <Select className="select" id="idioma" placeholder="Idioma da página" value={pageIdioma} onChange={(e) => setPageIdioma(e.target.value)} required>
                 <option value="pt-BR">Português - Brasil</option>
                 <option value="en">Inglês - Americano</option>
               </Select>
@@ -128,7 +135,7 @@ export function Main() {
             {/* Robos de navegação */}
             <label htmlFor="robts" className="camp">
               <Robot />
-              <Select className="select" id="robts" placeholder="Robôs de navegação" onChange={(e) => setPageRobots(Array.from(e.target.selectedOptions, (option) => option.value))}>
+              <Select className="select" id="robts" placeholder="Robôs de navegação" onChange={(e) => setPageRobots(Array.from(e.target.selectedOptions, (option) => option.value))} required>
                 <option value="all">Seguir e fixar páginas</option>
                 <option value="index">Fixar página</option>
                 <option value="follow">Seguir páginas</option>
@@ -154,7 +161,7 @@ export function Main() {
               <input type="text" id="googleid" placeholder="Google Analytics" value={googleId} onChange={(e) => setGoogleId(e.target.value)} maxLength={64} size={64} />
             </label>
           </section>
-          <Button type="submit" className="_btn"><Code /> Gerar MetaTags</Button>
+          <Button type="submit" className="_btn" title="Gerar MetaTags"><Code /> Gerar MetaTags</Button>
         </form>
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
