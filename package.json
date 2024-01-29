@@ -1,7 +1,8 @@
 {
   "name": "metatags",
+  "homepage": "metatags/",
   "private": true,
-  "version": "B1.0.4",
+  "version": "B1.0.5",
   "type": "module",
   "company": {
     "name": "Cat's Flow",
