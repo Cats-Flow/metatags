@@ -4,10 +4,6 @@ import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, Modal
 import { Code, Key, LinkSimple, Robot, TextAlignLeft, TextT, Translate, User, X } from "@phosphor-icons/react";
 import { MetaTagPreview } from './preview';
 
-// Styles
-import "../../public/styles/main.css"
-import "../../public/styles/modal.css"
-
 export function Main() {
   const [pageUrl, setPageUrl] = useState("");
   const [pageTitle, setPageTitle] = useState("");
