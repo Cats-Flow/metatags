@@ -10,7 +10,7 @@ export function Header() {
         rel="noopener noreferrer"
         title="Cat's Flow"
       >
-        <img src="/config/assets/logo.svg" alt="Logo da Cat's Flow" />
+        <img src="./config/assets/logo.svg" alt="Logo da Cat's Flow" />
       </a>
       <Divider orientation="vertical" />
       <h1>MetaTags ToolKit</h1>
